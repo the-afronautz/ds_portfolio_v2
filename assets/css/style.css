@@ -801,16 +801,6 @@ main {
   line-height: 1.6;
 }
 
-.timeline-item ul {
-  list-style-type: disc;
-  padding-left: 1.5em;
-  margin-top: 0.5em;
-}
-
-.timeline-item li {
-  margin-bottom: 0.5em;
-}
-
 .timeline-item:not(:last-child)::before {
   content: "";
   position: absolute;
