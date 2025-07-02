@@ -833,7 +833,7 @@ main {
 
 /**
  * skills 
- */
+
 
 .skills-title { margin-bottom: 20px; }
 
@@ -867,9 +867,23 @@ main {
   height: 100%;
   border-radius: inherit;
 }
+ */
 
 
+/* qualifications */
 
+.qualifications-list {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.qualifications-item {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  line-height: 1.6;
+}
 
 
 /*-----------------------------------*\
