@@ -144,9 +144,12 @@ const pages = document.querySelectorAll("[data-page]");
 navigationLinks.forEach(link => {
   link.addEventListener("click", function () {
     const targetPage = link.innerHTML.trim().toLowerCase();
+    const matchedPage = Array.from(pages).find(page => page.dataset.page === targetPage);
+
+    if (!matchedPage) return; // no match = no changes
 
     pages.forEach(page => {
-      page.classList.toggle("active", page.dataset.page === targetPage);
+      page.classList.toggle("active", page === matchedPage);
     });
 
     navigationLinks.forEach(nav => {
