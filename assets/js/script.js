@@ -140,13 +140,12 @@ for (let i = 0; i < formInputs.length; i++) {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav links
 navigationLinks.forEach(link => {
   link.addEventListener("click", function () {
-    const targetPage = link.innerHTML.trim().toLowerCase();
+    const targetPage = link.textContent.trim().toLowerCase();
     const matchedPage = Array.from(pages).find(page => page.dataset.page === targetPage);
 
-    if (!matchedPage) return; // no match = no changes
+    if (!matchedPage) return;
 
     pages.forEach(page => {
       page.classList.toggle("active", page === matchedPage);
